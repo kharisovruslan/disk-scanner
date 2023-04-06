@@ -68,7 +68,8 @@ public class FilesStorage {
 
     public Set<String> loadExceptionsFilesList() {
         Set<String> l = new HashSet<>();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(getExceptionsFileName()), "UTF-8"));) {
+        try (BufferedReader br = new BufferedReader(
+                new InputStreamReader(new FileInputStream(getExceptionsFileName()), "UTF-8"));) {
             String r;
             while ((r = br.readLine()) != null) {
                 l.add(r);
@@ -82,7 +83,8 @@ public class FilesStorage {
     }
 
     public void saveExceptionsFilesList(Set<String> set) {
-        try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(getExceptionsFileName()), "UTF-8"));) {
+        try (BufferedWriter bw = new BufferedWriter(
+                new OutputStreamWriter(new FileOutputStream(getExceptionsFileName()), "UTF-8"));) {
             for (String r : set) {
                 bw.write(r + "\n");
             }
@@ -94,7 +96,8 @@ public class FilesStorage {
     public void save(FileInfo root, String drive) {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            mapper.writeValue(compress(getFileName(drive)), root);
+            //mapper.writerWithDefaultPrettyPrinter().writeValue(compress(getFileName(drive)), root);
+            compress(getFileName(drive), mapper.writerWithDefaultPrettyPrinter().writeValueAsBytes(root));
         } catch (FileNotFoundException ex) {
             log.error(ex.getMessage() + " drive " + drive, drive);
         } catch (IOException ex) {
@@ -129,15 +132,14 @@ public class FilesStorage {
         });
     }
 
-    private OutputStream compress(File f) {
-        try {
-            return new GzipCompressorOutputStream(new FileOutputStream(f));
+    private void compress(File f, byte[] buf) {
+        try (GzipCompressorOutputStream gzip = new GzipCompressorOutputStream(new FileOutputStream(f));) {
+            gzip.write(buf);
         } catch (FileNotFoundException ex) {
             log.error(ex.getMessage() + " file " + f.getAbsolutePath(), ex);
         } catch (IOException ex) {
             log.error(ex.getMessage() + " file " + f.getAbsolutePath(), ex);
         }
-        return null;
     }
 
     private InputStream decompress(File f) {

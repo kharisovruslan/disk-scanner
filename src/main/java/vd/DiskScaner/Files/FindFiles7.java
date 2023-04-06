@@ -98,6 +98,19 @@ public class FindFiles7 implements FindFiles {
         return false;
     }
 
+    /**
+     * returns true if the Path is a Windows Junction
+     */
+    private static boolean isJunction(Path p) {
+        boolean isJunction = false;
+        try {
+            isJunction = (p.compareTo(p.toRealPath()) != 0);
+        } catch (IOException e) {
+            e.printStackTrace(); // TODO: handleMeProperly
+        }
+        return isJunction;
+    }
+
     @Override
     public FileInfo startwithdisk(String drive) {
         Map<String, FileInfo> parents = new HashMap<>();
@@ -135,6 +148,9 @@ public class FindFiles7 implements FindFiles {
                 public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes a) throws IOException {
                     String fname = dir.toAbsolutePath().toString();
                     FileInfo parent;
+                    if(isJunction(dir)) {
+                        return FileVisitResult.SKIP_SUBTREE;
+                    }
                     if (isExceptPath(fname)) {
                         return FileVisitResult.CONTINUE;
                     }
