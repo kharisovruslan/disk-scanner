@@ -1,4 +1,4 @@
-package vd.DiskScaner;
+package com.github.kharisovruslan;
 
 import java.awt.Desktop;
 import java.io.IOException;

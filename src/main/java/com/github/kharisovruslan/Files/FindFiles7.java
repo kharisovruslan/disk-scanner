@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vd.DiskScaner.Files;
+package com.github.kharisovruslan.Files;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,7 +30,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.util.DigestUtils;
-import vd.DiskScaner.ConfigProperties;
+import com.github.kharisovruslan.ConfigProperties;
 
 /**
  *

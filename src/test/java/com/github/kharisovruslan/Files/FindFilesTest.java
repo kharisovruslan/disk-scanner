@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vd.DiskScaner.Files;
+package com.github.kharisovruslan.Files;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,8 +19,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import vd.DiskScaner.ConfigProperties;
-import vd.DiskScaner.DiskScanerApplication;
+import com.github.kharisovruslan.ConfigProperties;
+import com.github.kharisovruslan.DiskScanerApplication;
 
 /**
  *

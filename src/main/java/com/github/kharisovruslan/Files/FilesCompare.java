@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vd.DiskScaner.Files;
+package com.github.kharisovruslan.Files;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import vd.DiskScaner.ConfigProperties;
+import com.github.kharisovruslan.ConfigProperties;
 
 /**
  *

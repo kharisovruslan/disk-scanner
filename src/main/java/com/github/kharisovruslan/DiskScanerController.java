@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vd.DiskScaner;
+package com.github.kharisovruslan;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -24,9 +24,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import vd.DiskScaner.Files.DiskScaner;
-import vd.DiskScaner.Files.FilesStorage;
-import vd.DiskScaner.Files.FindFiles;
+import com.github.kharisovruslan.Files.DiskScaner;
+import com.github.kharisovruslan.Files.FilesStorage;
+import com.github.kharisovruslan.Files.FindFiles;
 
 /**
  *

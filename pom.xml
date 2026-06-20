@@ -8,10 +8,10 @@
         <version>2.7.9</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>vd</groupId>
-    <artifactId>DiskScaner</artifactId>
+    <groupId>com.github.kharisovruslan</groupId>
+    <artifactId>disk-scanner</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>DiskScaner</name>
+    <name>Disk Scanner</name>
     <description>Analysis changes in files</description>
 
     <properties>

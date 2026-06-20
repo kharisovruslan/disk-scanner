@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vd.DiskScaner;
+package com.github.kharisovruslan;
 
 import java.util.ArrayList;
 import java.util.List;
-import vd.DiskScaner.Files.FileChangeInfo;
+import com.github.kharisovruslan.Files.FileChangeInfo;
 
 /**
  *

@@ -3,18 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vd.DiskScaner.Files;
-
-import java.util.List;
+package com.github.kharisovruslan.Files;
 
 /**
  *
  * @author Kharisov Ruslan
  */
-public interface FindFiles {
-
-    List<String> getDisks();
-
-    FileInfo startwithdisk(String drive);
-
+public enum ChangeInfo {
+    New,
+    Change,
+    Delete, Rename, Move;
 }

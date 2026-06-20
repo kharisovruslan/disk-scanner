@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vd.DiskScaner.Files;
+package com.github.kharisovruslan.Files;
 
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import vd.DiskScaner.DiskScanerApplication;
+import com.github.kharisovruslan.DiskScanerApplication;
 
 /**
  *

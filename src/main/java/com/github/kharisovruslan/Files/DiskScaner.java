@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vd.DiskScaner.Files;
+package com.github.kharisovruslan.Files;
 
 import java.util.List;
 import java.util.concurrent.Future;
@@ -14,7 +14,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Component;
-import vd.DiskScaner.DriveFilesChangeInfo;
+import com.github.kharisovruslan.DriveFilesChangeInfo;
 
 /**
  *
